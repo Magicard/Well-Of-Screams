@@ -1,7 +1,11 @@
 <template>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
     <jet-authentication-card>
         <template #logo>
-            <jet-authentication-card-logo />
+            <inertia-link href="/" class="text-8xl title md:rounded-b-md mb-12 text-center mx-auto"
+                          style="font-family: 'Raleway', sans-serif !important;"> Well Of Screams
+            </inertia-link>
         </template>
 
         <jet-validation-errors class="mb-4" />
@@ -33,9 +37,10 @@
                     Forgot your password?
                 </inertia-link>
 
-                <jet-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <button class="bg-blue-400 hover:bg-blue-300 text-white font-bold py-2 px-4 border-b-4
+                    border-blue-700 hover:border-blue-500 rounded-full text-center ml-auto" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Log in
-                </jet-button>
+                </button>
             </div>
         </form>
     </jet-authentication-card>
